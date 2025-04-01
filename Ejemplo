@@ -1,0 +1,6 @@
+# Lista de nombres de amigos
+amigos = ["Carlos", "Ana", "Juan", "Maria"]
+
+# Usamos un ciclo for para saludar a cada amigo
+for amigo in amigos:
+    print(f"¡Hola, {amigo}!")

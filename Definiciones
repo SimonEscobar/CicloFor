@@ -1,0 +1,52 @@
+El ciclo for es una de las estructuras más poderosas y versátiles en Python. Te permite iterar sobre secuencias (como listas, tuplas, cadenas de texto, etc.) o cualquier objeto
+iterable (como un rango de números) y ejecutar un bloque de código para cada elemento de la secuencia. Es fundamental cuando necesitas repetir un bloque de código varias veces.
+
+for variable in secuencia:
+    # Bloque de código
+
+variable: Es la variable que tomará el valor de cada elemento de la secuencia en cada iteración.
+secuencia: Es una colección de datos como una lista, tupla, cadena, conjunto, diccionario, o incluso un rango de números.
+Bloque de código: El conjunto de instrucciones que se ejecutan por cada elemento de la secuencia.
+
+Uso del Rango range() en el Ciclo for
+La función range() es muy útil cuando necesitas ejecutar un ciclo for un número específico de veces. range() genera una secuencia de números, y el ciclo for puede iterar sobre estos números.
+
+range(start, stop, step)
+start: El valor de inicio (por defecto es 0).
+stop: El valor donde termina la secuencia (no se incluye).
+step: El tamaño del paso entre los valores (por defecto es 1).
+
+Ciclo for con Listas Anidadas (Listas dentro de listas)
+En ocasiones, las secuencias son más complejas, como listas dentro de listas (listas anidadas). El ciclo for también puede manejar este tipo de estructuras.
+
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+for fila in matriz:
+    for columna in fila:
+        print(columna, end=" ")
+    print()  # Hacer un salto de línea después de cada fila
+
+Usos Comunes del Ciclo for
+Iterar sobre una lista o colección de elementos: Recorrer y realizar acciones sobre los elementos.
+Generar secuencias de números: Usar range() para generar secuencias de números y repetir un bloque de código un número determinado de veces.
+Realizar operaciones acumulativas: Como sumar o contar elementos.
+
+Ciclo for con Condiciones
+Puedes usar un ciclo for junto con condiciones (if) para filtrar los elementos sobre los cuales deseas operar.
+
+numeros = [1, 2, 3, 4, 5, 6]
+for numero in numeros:
+    if numero % 2 == 0:  # Solo imprimir los números pares
+        print(numero)
+
+Ciclo for con else
+El ciclo for puede tener un bloque else que se ejecuta cuando el ciclo termina de iterar sin que se haya ejecutado un break. Es útil cuando deseas ejecutar algo después de
+que el ciclo haya recorrido toda la secuencia sin interrupciones.
+
+numeros = [1, 2, 3, 4, 5]
+for numero in numeros:
+    if numero == 3:
+        print("Número 3 encontrado")
+        break
+else:
+    print("El ciclo terminó sin encontrar el número 3")
